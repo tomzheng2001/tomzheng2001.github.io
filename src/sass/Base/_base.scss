@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // 1 rem = 10px
+}
+
+body {
+    box-sizing: border-box;
+}
+
+$main-color: #720026;
+$secondary-color: #ff7f51;
