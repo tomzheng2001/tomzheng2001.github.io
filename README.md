@@ -1,4 +1,4 @@
 # A Portolio Website
 
-In Progress. Build using ReactJS
+In Progress. Built using ReactJS.
 
