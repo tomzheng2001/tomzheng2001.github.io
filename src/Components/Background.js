@@ -22,7 +22,7 @@ const Background = () => {
               }
             },
             opacity: {
-              value: 0.5211089197812949,
+              value: 0.4,
               random: false,
               animation: {
                 enable: true,
@@ -45,7 +45,7 @@ const Background = () => {
               enable: false,
               distance: 150,
               color: "#ff7f51",
-              opacity: 0.4,
+              opacity: 0.3,
               width: 1
             },
             move: {
