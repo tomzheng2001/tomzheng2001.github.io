@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 
 const Background = () => {
     return <Particles id="tsparticles" options={{
-        fpsLimit: 60,
+        fpsLimit: 30,
         interactivity: {
           detect_on: 'window',
           events: {
