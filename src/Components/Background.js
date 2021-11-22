@@ -61,7 +61,7 @@ const Background = () => {
             value: 5,
           },
         },
-        detectRetina: true,
+        detectRetina: false,
       }}/>
 }
 
