@@ -1,0 +1,78 @@
+.footer {
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    &__links {
+        display: flex;
+        gap: 3rem;
+        font-family: "Inter";
+        font-size: 2rem;
+        font-weight: 700;
+
+        a {
+            text-decoration: none;
+            color: $tertiary-color;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.3rem;
+                background-color: $tertiary-color;
+                transform: translateX(-100%);
+                transition: all 0.3s ease-in;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.3rem;
+                background-color: $quaternary-color;
+                transform: translateX(-100%);
+                transition: all 0.3s ease-out 0.15s;
+            }
+
+            &:hover::before {
+                transform: translateX(0);
+            }
+
+            &:hover::after {
+                transform: translateX(100%);
+            }
+        }
+    }
+
+    &__logo {
+        margin-top: 2rem;
+        margin-left: 2rem;
+
+        img {
+            width: 2.93 * 2rem;
+            height: 6rem;
+            transition: all 0.2s ease-out;
+            filter: brightness(0) saturate(100%) invert(5%) sepia(75%)
+                saturate(6574%) hue-rotate(333deg) brightness(103%)
+                contrast(102%);
+        }
+    }
+
+    p {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+}

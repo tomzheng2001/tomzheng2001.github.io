@@ -1,0 +1,265 @@
+.about {
+    height: 100vh;
+    width: 100%;
+    font-family: "Inter";
+    background-color: $secondary-color;
+    position: relative;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr) repeat(2, 0.5fr);
+    justify-content: space-around;
+    align-items: center;
+    color: $main-color;
+
+    @include respond(tab-port) {
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__heading1 {
+        align-self: center;
+        grid-column: 2 / 10;
+        grid-row: 1 / 2;
+        margin-top: 5%;
+        font-size: 8rem;
+
+        @include respond(tab-port) {
+            margin-top: -13%;
+        }
+    }
+
+    &__heading2 {
+        position: absolute;
+        align-self: center;
+        grid-row: 1 / 2;
+        grid-column: 1 / 8;
+        font-size: 30rem;
+        opacity: 0.2;
+        z-index: -1;
+        margin-top: -5%;
+        @include respond(tab-port) {
+            margin-top: -137%;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        padding: 6rem;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+            transform: scaleY(-1);
+            gap: 8rem;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 2rem;
+            font-weight: 500;
+            width: 50%;
+            grid-column: 1 / 6;
+
+            @include respond(tab-port) {
+                transform: scaleY(-1);
+                align-items: center;
+                text-align: center;
+            }
+
+            button {
+                grid-column: 1 / 3;
+                font-family: "Inter";
+                font-size: 2rem;
+                color: $main-color;
+                font-weight: 600;
+                width: 50%;
+                padding: 1rem 3rem;
+                background-color: transparent;
+                border: 3px solid $main-color;
+                margin-top: 5rem;
+                margin-bottom: -10rem;
+                cursor: pointer;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.5s ease-in;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: $tertiary-color;
+                    top: 0;
+                    left: 0;
+                    width: 150%;
+                    height: 150%;
+                    transform: translateX(-100%);
+                    transition: all 0.3s ease-in;
+                    z-index: -1;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $quaternary-color;
+                    top: 0;
+                    left: 0;
+                    width: 150%;
+                    height: 150%;
+                    transform: translateX(-100%);
+                    transition: all 0.3s ease-out 0.15s;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    transform: translateX(0);
+                }
+
+                &:hover::after {
+                    transform: translateX(100%);
+                }
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    &__photo {
+        border-right: 5px solid $secondary-color;
+        border-top: 5px solid $secondary-color;
+        border-bottom: 5px solid $quinary-color;
+        border-left: 5px solid $quinary-color;
+        border-radius: 50%;
+        width: 30vh;
+        height: 30vh;
+        object-fit: cover;
+        grid-column: 6 / -1;
+    }
+}
+
+.ih-item {
+    position: relative;
+    transition: all 0.35s ease-in-out;
+
+    @include respond(tab-port) {
+        transform: scaleY(-1);
+    }
+}
+.ih-item,
+.ih-item * {
+    box-sizing: border-box;
+}
+.ih-item a {
+    color: #333;
+}
+.ih-item a:hover {
+    text-decoration: none;
+}
+.ih-item img {
+    width: 100%;
+    height: 100%;
+}
+
+.ih-item.circle {
+    position: relative;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+}
+.ih-item.circle .img {
+    position: relative;
+    border-radius: 50%;
+}
+.ih-item.circle .img:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6),
+        0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.35s ease-in-out;
+}
+.ih-item.circle .img img {
+    border-radius: 50%;
+}
+.ih-item.circle .info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 50%;
+    backface-visibility: hidden;
+}
+
+.ih-item.circle.effect1 .spinner {
+    width: 33rem;
+    height: 33rem;
+    border: 10px solid $quaternary-color;
+    border-right-color: $tertiary-color;
+    border-bottom-color: $tertiary-color;
+    border-radius: 50%;
+    transition: all 0.8s ease-in-out;
+}
+.ih-item.circle.effect1 .img {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+.ih-item.circle.effect1 .img:before {
+    display: none;
+}
+.ih-item.circle.effect1.colored .info {
+    background: #1a4a72;
+    background: rgba(26, 74, 114, 0.6);
+}
+.ih-item.circle.effect1 .info {
+    top: 10px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ih-item.circle.effect1 .info h3 {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0 30px;
+    margin-top: -10px;
+    padding: 55px 0 0 0;
+    height: 110px;
+    text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ih-item.circle.effect1 a:hover .spinner {
+    transform: rotate(180deg);
+}
+.ih-item.circle.effect1 a:hover .info {
+    opacity: 1;
+}

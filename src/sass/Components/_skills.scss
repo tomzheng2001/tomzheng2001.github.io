@@ -1,0 +1,408 @@
+.skills {
+    height: 350vh;
+    width: 100%;
+    position: relative;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__heading1 {
+        align-self: flex-end;
+        margin-top: 8vh;
+        margin-right: 6vw;
+        color: $secondary-color;
+        opacity: 1.5;
+        font-family: "Inter";
+        font-size: 8rem;
+        z-index: 1;
+    }
+
+    &__heading2 {
+        position: absolute;
+        align-self: flex-end;
+        font-size: 30rem;
+        opacity: 0.3;
+        margin-top: -12vh;
+        margin-left: -8vw;
+        z-index: 0;
+        color: $quaternary-color;
+        font-family: "Inter";
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15rem;
+        margin-top: -10rem;
+
+        &-frontend {
+            display: grid;
+            border: 5px solid $secondary-color;
+            background-color: $secondary-color;
+            padding: 5rem;
+            padding-top: 8rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 5rem 2rem;
+            width: 70%;
+            margin-left: -10vw;
+            position: relative;
+            box-shadow: 7px 7px 5px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+            border-radius: 1rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 1rem 0.5rem;
+                width: 80%;
+            }
+
+            &-text {
+                position: absolute;
+                font-family: "Inter";
+                font-size: 15rem;
+                color: $quaternary-color;
+                opacity: 0.5;
+                top: 0;
+                left: 0;
+                margin-top: -7rem;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+
+                @include respond(tab-port) {
+                    font-size: 12rem;
+                    margin-top: -6rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
+                .skills__main-frontend-text {
+                    opacity: 1;
+                    transform: scale(1.05) translateX(2rem);
+                    text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        &-backend {
+            display: grid;
+            border: 5px solid $secondary-color;
+            background-color: $secondary-color;
+            padding: 5rem;
+            padding-top: 8rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 5rem 2rem;
+            width: 70%;
+            margin-right: -10vw;
+            position: relative;
+            box-shadow: 7px 7px 5px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+            border-radius: 1rem;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 1rem 0.5rem;
+                width: 80%;
+            }
+
+            &-text {
+                position: absolute;
+                font-family: "Inter";
+                font-size: 15rem;
+                color: $quaternary-color;
+                opacity: 0.5;
+                top: 0;
+                right: 0;
+                margin-top: -7rem;
+                text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+
+                @include respond(tab-port) {
+                    font-size: 12rem;
+                    margin-top: -6rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
+                .skills__main-backend-text {
+                    opacity: 1;
+                    transform: scale(1.05) translateX(-2rem);
+                    text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        &-courses {
+            display: flex;
+            border: 5px solid $secondary-color;
+            padding: 5rem;
+            padding-top: 12rem;
+            width: 70%;
+            justify-content: space-around;
+            margin-right: -10vw;
+            border-radius: 1rem;
+            position: relative;
+            background-color: $secondary-color;
+            box-shadow: 7px 7px 5px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+
+            @include respond(tab-port) {
+                margin-right: 0;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 1rem 0.5rem;
+                width: 80%;
+            }
+
+            &-text {
+                position: absolute;
+                font-family: "Inter";
+                font-size: 15rem;
+                color: $quaternary-color;
+                opacity: 0.5;
+                top: 0;
+                right: 0;
+                margin-top: -7rem;
+                text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+
+                @include respond(tab-port) {
+                    font-size: 12rem;
+                    margin-top: -6rem;
+                }
+            }
+
+            &:hover {
+                box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
+                .skills__main-courses-text {
+                    opacity: 1;
+                    transform: scale(1.05) translateX(-2rem);
+                    text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+
+        &-languages {
+            display: grid;
+            border: 5px solid $secondary-color;
+            padding: 5rem;
+            padding-top: 8rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 5rem 2rem;
+            width: 70%;
+            position: relative;
+            box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
+            background-color: $secondary-color;
+            margin-left: -10vw;
+            border-radius: 1rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+
+            &-text {
+                position: absolute;
+                font-family: "Inter";
+                font-size: 15rem;
+                color: $quaternary-color;
+                opacity: 0.4;
+                top: 0;
+                left: 0;
+                margin-top: -7rem;
+                text-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+
+                @include respond(tab-port) {
+                    font-size: 13rem;
+                }
+            }
+
+            &:hover {
+                .skills__main-languages-text {
+                    opacity: 1;
+                    transform: scale(1.05) translateX(2rem);
+                    text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Inter";
+    color: $main-color;
+    gap: 1rem;
+    margin-top: 3rem;
+    cursor: pointer;
+
+    i {
+        font-size: 6rem;
+        transition: all 0.4s ease;
+        color: $main-color;
+    }
+
+    h4 {
+        font-size: 2.5rem;
+        transition: all 0.15s ease;
+        text-align: center;
+    }
+
+    &:hover > i {
+        transform: rotateY(360deg) scale(1.3);
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    &:hover > h4 {
+        transform: scale(1.15) translateY(0.8rem);
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.classlist {
+    font-family: "Inter";
+    color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: $main-color;
+
+    &__item {
+        text-decoration: none;
+        color: $main-color;
+        position: relative;
+        overflow: hidden;
+        padding: 0.5rem;
+
+        &::before {
+            content: "Syllabus";
+            font-family: "Inter";
+            font-weight: 500;
+            font-size: 2rem;
+            color: $main-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $secondary-color;
+            transform: translateX(-101%);
+            transition: all 0.3s ease-in;
+            border-radius: 7px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $tertiary-color;
+            border-radius: 7px;
+            transform: translateX(-101%);
+            transition: all 0.3s ease-out 0.15s;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+            border: 4px solid $main-color;
+        }
+
+        &:hover::after {
+            transform: translateX(100%);
+        }
+
+        &-header {
+            font-size: 1.75rem;
+        }
+
+        &-description {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.ribbon {
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    z-index: 1;
+    overflow: hidden;
+    width: 10.5rem;
+    height: 10.5em;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family: "Inter";
+    color: $main-color;
+    text-align: center;
+    line-height: 1.75rem;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    width: 15rem;
+    display: block;
+    background: #79a70a;
+    background: linear-gradient(#ffc922 0%, #ffc922 100%);
+    box-shadow: 5px 5px 3px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 3rem;
+    left: -3rem;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #ffc922;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #ffc922;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #ffc922;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #ffc922;
+}
+
+.skills__main-frontend-text {
+    transition: all 0.3s ease;
+}
+
+.skills__main-backend-text {
+    transition: all 0.3s ease;
+}
+
+.skills__main-languages-text {
+    transition: all 0.3s ease;
+}
+
+.skills__main-courses-text {
+    transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 700px) {
+    .ribbon {
+        visibility: hidden;
+    }
+}

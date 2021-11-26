@@ -1,0 +1,54 @@
+.projects {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    background-color: $quaternary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Inter";
+    z-index: 0;
+
+    @media only screen and (max-width: 1200px) {
+        height: 250vh;
+    }
+
+    &__heading1 {
+        position: relative;
+        align-self: flex-start;
+        margin-top: 8vh;
+        margin-left: 10vw;
+        color: $tertiary-color;
+        opacity: 1.5;
+        font-family: "Inter";
+        font-size: 8rem;
+        z-index: 1;
+    }
+
+    &__heading2 {
+        position: absolute;
+        align-self: flex-start;
+        font-size: 30rem;
+        opacity: 0.2;
+        z-index: 1;
+        margin-top: -12vh;
+        color: $tertiary-color;
+        font-family: "Inter";
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 100%;
+        height: 100%;
+        padding: 8rem;
+        grid-gap: 3rem 6rem;
+        margin-top: -5rem;
+
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

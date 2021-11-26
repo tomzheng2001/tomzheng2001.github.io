@@ -9,6 +9,18 @@
 html {
     // This defines what 1rem is
     font-size: 62.5%; // 1 rem = 10px
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -17,3 +29,6 @@ body {
 
 $main-color: #720026;
 $secondary-color: #ff7f51;
+$tertiary-color: #4f000b;
+$quaternary-color: #ce4257;
+$quinary-color: #ff9b54;

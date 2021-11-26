@@ -1,41 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ovo&display=swap");
 
 .landing {
     z-index: 100;
     display: flex;
     height: 100vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-color: $main-color;
     color: #fff;
     font-size: 1.5rem;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    // clip-path: polygon(100% 0, 100% 80vh, 50% 100%, 0 80vh, 0 0);
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -4rem;
+    }
 
     &__header {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-weight: 300;
         margin: 0.5rem;
 
         &-name {
             color: $secondary-color;
-            font-family: 'Inter';
+            font-family: "Inter";
             font-weight: 600;
         }
     }
 
+    #link {
+        text-decoration: none;
+        z-index: 1;
+
+        .landing__arrow {
+            background-color: transparent;
+            border: none;
+            font-size: 5rem;
+            // border: 3px solid $secondary-color;
+            border-radius: 50%;
+            padding: 4rem;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 4rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+
+            &:hover {
+                font-size: 8rem;
+            }
+
+            &:active {
+                font-size: 6rem;
+                transform: translateY(0.75rem);
+            }
+
+            span {
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                background-color: transparent;
+                border-radius: 50%;
+                z-index: -1;
+                animation: scaleIn 1s infinite ease-in;
+
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                    opacity: 1;
+                    border: 3rem solid $secondary-color;
+                }
+                &:nth-child(2) {
+                    animation-delay: 0.25s;
+                    opacity: 0.75;
+                    border: 3rem solid $secondary-color;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.5s;
+                    opacity: 0.5;
+                    border: 3rem solid $secondary-color;
+                }
+                &:nth-child(4) {
+                    animation-delay: 0.75s;
+                    opacity: 0.25;
+                    border: 3rem solid $secondary-color;
+                }
+            }
+        }
+    }
+
     &__description {
-        font-family: 'Inter';
+        font-family: "Inter";
         font-weight: 600;
         margin: 0.5rem;
     }
 
+    &__mediaicons {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        z-index: 1;
+
+        #link {
+            text-decoration: none;
+        }
+
+        &-btn {
+            padding: 1rem;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 3px solid $secondary-color;
+            transition: all 0.2s ease;
+            font-size: 1.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $secondary-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondary-color;
+                border: 3px solid $secondary-color;
+                color: $main-color;
+                font-size: 2.5rem;
+                transform: scale(1.25);
+            }
+        }
+    }
+
     &__button {
         color: $secondary-color;
-        font-size: 16px;
+        font-size: 1.6rem;
         border: 3px solid $secondary-color;
         padding: 1.25rem 2rem;
-        font-family: 'Inter';
+        font-family: "Inter";
         font-weight: 700;
         text-align: center;
         border-radius: 1rem;
@@ -45,7 +154,7 @@
         transition: color 0.4s ease, transform 0.1s;
         background-color: transparent;
         margin-top: 2rem;
-        box-shadow: 10px 5px 5px rgba(0,0,0,0.2);
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
         text-decoration: none;
 
         span {
@@ -83,20 +192,19 @@
         }
 
         &:active {
-            transform: translateY(3px);
-            box-shadow: 5px 3px 3px rgba(0,0,0,0.2);
+            transform: translateY(2.5px);
+            box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.2);
         }
-        
     }
 }
 
-#tsparticles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5, 0.5);
+        opacity: 0.75;
+    }
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+    }
+}

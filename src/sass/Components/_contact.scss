@@ -1,0 +1,178 @@
+.contact {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: $tertiary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__heading1 {
+        position: relative;
+        align-self: flex-end;
+        color: $secondary-color;
+        opacity: 1.5;
+        font-family: "Inter";
+        font-size: 8rem;
+        z-index: 1;
+        margin-top: 8vh;
+        margin-right: 7vw;
+    }
+
+    &__heading2 {
+        position: absolute;
+        align-self: flex-end;
+        font-size: 30rem;
+        opacity: 0.2;
+        z-index: 1;
+        margin-top: -12vh;
+        color: $secondary-color;
+        font-family: "Inter";
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        gap: 1.5rem;
+        width: 45%;
+    }
+
+    &__heading {
+        font-family: "Inter";
+        color: $secondary-color;
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    &__name {
+        input {
+            padding: 1rem 2rem;
+            font-family: "Inter";
+            outline: none;
+            border: none;
+            background: rgba($tertiary-color, 0.7);
+            border-bottom: 4px solid transparent;
+            color: $secondary-color;
+
+            &::placeholder {
+                color: $secondary-color;
+            }
+
+            &:focus {
+                border-bottom: 4px solid $secondary-color;
+            }
+        }
+    }
+
+    &__email {
+        input {
+            padding: 1rem 2rem;
+            font-family: "Inter";
+            outline: none;
+            border: none;
+            background: rgba($tertiary-color, 0.8);
+            border-bottom: 4px solid transparent;
+            color: $secondary-color;
+
+            &::placeholder {
+                color: $secondary-color;
+            }
+
+            &:focus {
+                border-bottom: 4px solid $secondary-color;
+                background: rgba($tertiary-color, 0.7);
+            }
+        }
+    }
+
+    &__message {
+        textarea {
+            padding: 1rem 2rem;
+            font-family: "Inter";
+            outline: none;
+            border: none;
+            background: rgba($tertiary-color, 0.7);
+            color: $secondary-color;
+            resize: none;
+
+            &::placeholder {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__submit {
+        padding: 1.25rem 2rem;
+        border-radius: 2.5rem;
+        border: 3px solid $secondary-color;
+        background: transparent;
+        color: $secondary-color;
+        font-family: "Inter";
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: color 0.2s ease-in, transform 0.1s ease;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 105%;
+            height: 100%;
+            background: $secondary-color;
+            transform: translateX(-100%);
+            transition: all 0.2s ease-in;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+        }
+
+        &:active {
+            transform: translateY(2px);
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        &:hover {
+            color: $main-color;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.wrapper {
+    width: 80%;
+    height: 60%;
+    border: 3px solid $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../../Assets/landscape.jpg");
+    background-size: cover;
+    position: relative;
+
+    @include respond(tab-port) {
+        background-color: $main-color;
+        background-image: none;
+        justify-content: center;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55%;
+        height: 100%;
+        background: rgba($tertiary-color, 0.8);
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+        z-index: 0;
+    }
+}

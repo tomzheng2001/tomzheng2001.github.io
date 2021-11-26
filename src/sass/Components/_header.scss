@@ -1,0 +1,147 @@
+.header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    height: 10vh;
+    z-index: 1;
+    font-family: "Inter";
+
+    &__logo {
+        margin-top: 2rem;
+        margin-left: 2rem;
+
+        img {
+            width: 2.93 * 2rem;
+            height: 6rem;
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover {
+            img {
+                filter: brightness(0) saturate(100%) invert(60%) sepia(57%)
+                    saturate(1276%) hue-rotate(325deg) brightness(101%)
+                    contrast(102%);
+            }
+        }
+    }
+
+    &__buttons {
+        padding: 1rem 5rem;
+        display: flex;
+        gap: 2rem;
+
+        a {
+            padding: 1.25rem 2.5rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease-in, color 0.5s ease-in;
+
+            .span1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: $secondary-color;
+                transform: translateY(250%);
+                transition: all 0.3s ease-in 0.15s;
+                z-index: -1;
+            }
+
+            .span2 {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 50%;
+                height: 100%;
+                background-color: $secondary-color;
+                transform: translateY(-250%);
+                transition: all 0.3s ease-in 0.15s;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: $main-color;
+                font-weight: 700;
+
+                span {
+                    transform: translateY(0);
+                    // border-radius: 5px;
+
+                    &:nth-child(1) {
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                    }
+
+                    &:nth-child(2) {
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                border-bottom: 2px solid #ff7f51;
+                border-left: 2px solid #ff7f51;
+                width: 20%;
+                border-radius: 2px;
+                height: 30%;
+                top: 50%;
+                left: 0;
+                transform: translateX(25%) translateY(65%) scaleX(1);
+                transform-origin: bottom left;
+                transition: all 0.25s ease-out;
+            }
+
+            &:hover::before {
+                border-top: 4px solid #ff7f51;
+                border-right: 4px solid #ff7f51;
+                border-bottom: none;
+                border-left: none;
+                border-radius: 5px;
+                width: 70%;
+                height: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-35%) translateY(-85%) scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            &:hover::after {
+                border-bottom: 4px solid #ff7f51;
+                border-left: 4px solid #ff7f51;
+                border-top: none;
+                border-right: none;
+                width: 70%;
+                border-radius: 5px;
+                height: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-65%) translateY(-15%) scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                border-top: 2px solid #ff7f51;
+                border-right: 2px solid #ff7f51;
+                border-radius: 2px;
+                width: 20%;
+                height: 30%;
+                top: 50%;
+                left: 50%;
+                transform: translateX(135%) translateY(-165%) scaleX(1);
+                transform-origin: bottom left;
+                transition: all 0.25s ease-out;
+            }
+        }
+    }
+}
