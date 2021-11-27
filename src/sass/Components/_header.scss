@@ -7,6 +7,17 @@
     height: 10vh;
     z-index: 1;
     font-family: "Inter";
+    position: relative;
+
+    #navigation {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 1rem 2rem;
+        overflow: hidden;
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
 
     &__logo {
         margin-top: 2rem;
@@ -27,10 +38,63 @@
         }
     }
 
+    &__hamburger.clicked {
+        .line {
+            &:nth-child(1) {
+                position: absolute;
+                top: 50%;
+                transform: rotate(-135deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                top: 50%;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &__hamburger {
+        border-radius: 50%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.7rem;
+        position: relative;
+        cursor: pointer;
+
+        .line {
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &__buttons.open {
+        transform: translateX(0) scale(1);
+    }
+
     &__buttons {
         padding: 1rem 5rem;
         display: flex;
         gap: 2rem;
+        transform: translateX(60%) scale(0.01);
+        transition: all 0.3s ease-out;
+
+        @include respond(tab-port) {
+            gap: 1.5rem;
+            padding: 1rem 2rem;
+        }
+
+        @include respond(phone) {
+            gap: 0.5rem;
+        }
 
         a {
             padding: 1.25rem 2.5rem;
@@ -40,6 +104,11 @@
             position: relative;
             overflow: hidden;
             transition: all 0.5s ease-in, color 0.5s ease-in;
+            cursor: pointer;
+
+            @include respond(phone) {
+                padding: 0.5rem 1rem;
+            }
 
             .span1 {
                 position: absolute;
@@ -90,14 +159,15 @@
                 position: absolute;
                 border-bottom: 2px solid #ff7f51;
                 border-left: 2px solid #ff7f51;
-                width: 20%;
-                border-radius: 2px;
-                height: 30%;
-                top: 50%;
+                width: 1%;
+                border-radius: 0px;
+                height: 1%;
+                top: 100%;
                 left: 0;
                 transform: translateX(25%) translateY(65%) scaleX(1);
-                transform-origin: bottom left;
+                transform-origin: top left;
                 transition: all 0.25s ease-out;
+                opacity: 1;
             }
 
             &:hover::before {
@@ -133,11 +203,11 @@
                 position: absolute;
                 border-top: 2px solid #ff7f51;
                 border-right: 2px solid #ff7f51;
-                border-radius: 2px;
-                width: 20%;
-                height: 30%;
-                top: 50%;
-                left: 50%;
+                border-radius: 0px;
+                width: 1%;
+                height: 1%;
+                top: 120%;
+                right: 5%;
                 transform: translateX(135%) translateY(-165%) scaleX(1);
                 transform-origin: bottom left;
                 transition: all 0.25s ease-out;

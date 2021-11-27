@@ -3,12 +3,8 @@ import React from "react";
 const Card = (props) => {
 
 
-    const divStyle = {
-        backgroundImage: 'url(' + props.imgsrc + ')',
-    }
-
     return (
-        <div className="card" style={divStyle}>
+        <div className="card">
             <h1 className="card__header">
                 {props.header}
             </h1>

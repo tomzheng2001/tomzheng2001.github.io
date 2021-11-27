@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Background from "./Background";
 import About from "./About";
 import Header from "./Header";
@@ -6,10 +6,20 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Loader from "./Loader";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 const Landing = () => {
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 4000);
+    }, [])
+
     return (
+        loading ?  <Loader loading={loading} /> :
         <Fragment>
             <div className="landing" id="particles">
                 <Header />
@@ -48,12 +58,15 @@ const Landing = () => {
                         </a>
                     </div>
                 </div>
-                <a id="link" href="#scrolldown" >
+                <Link activeClass="active"
+                    to="section1"
+                    spy={true}
+                    smooth={true} id="link" href="#scrolldown" >
                     <button className="landing__arrow">
                         <i class="fas fa-long-arrow-alt-down"></i>
                         <span></span><span></span><span></span><span></span>
                     </button>     
-                </a>
+                </Link>
                 <Background className="landing__bg" />
             </div>
             <About />

@@ -10,7 +10,7 @@ const Projects = () => {
     const description5 = "A barebones database implementation written for CS W186 (Intro to Database Systems) which supports B+ trees, joins, query optimization, concurrency, multigranularity locking, and recovery";
 
     return (
-        <div className="projects">
+        <div id="section2" className="projects">
             <Fragment>
                 <h1 className="projects__heading1">Projects</h1>
                 <h1 className="projects__heading2">03</h1>

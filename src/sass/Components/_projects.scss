@@ -9,10 +9,6 @@
     font-family: "Inter";
     z-index: 0;
 
-    @media only screen and (max-width: 1200px) {
-        height: 250vh;
-    }
-
     &__heading1 {
         position: relative;
         align-self: flex-start;
@@ -50,5 +46,23 @@
             display: flex;
             flex-direction: column;
         }
+
+        @include respond(phone) {
+            padding: 4rem;
+            gap: 5rem;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .projects {
+        height: 250vh;
+    }
+}
+
+@media only screen and (max-height: 700) {
+    .projects {
+        height: 250vh;
     }
 }

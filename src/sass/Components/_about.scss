@@ -17,6 +17,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+    }
+
+    @include respond(phone) {
+        height: 160vh;
     }
 
     &__heading1 {
@@ -27,7 +32,13 @@
         font-size: 8rem;
 
         @include respond(tab-port) {
-            margin-top: -13%;
+            margin-top: -20%;
+        }
+
+        @include respond(phone) {
+            top: 0;
+            text-align: center;
+            font-size: 6rem;
         }
     }
 
@@ -41,7 +52,12 @@
         z-index: -1;
         margin-top: -5%;
         @include respond(tab-port) {
-            margin-top: -137%;
+            top: 0;
+            margin-top: -12.5%;
+        }
+
+        @include respond(phone) {
+            opacity: 0;
         }
     }
 
@@ -74,6 +90,7 @@
                 transform: scaleY(-1);
                 align-items: center;
                 text-align: center;
+                width: 90%;
             }
 
             button {

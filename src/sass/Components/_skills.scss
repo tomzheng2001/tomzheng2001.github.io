@@ -1,11 +1,27 @@
 .skills {
-    height: 350vh;
+    height: 335vh;
     width: 100%;
     position: relative;
     background-color: $main-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and (max-height: 800px) {
+        height: 365vh;
+    }
+
+    @media only screen and (max-height: 700px) {
+        height: 400vh;
+    }
+
+    @media only screen and (max-height: 640px) {
+        height: 430vh;
+    }
+
+    @include respond(phone) {
+        height: 460vh;
+    }
 
     &__heading1 {
         align-self: flex-end;
@@ -16,6 +32,11 @@
         font-family: "Inter";
         font-size: 8rem;
         z-index: 1;
+
+        @include respond(phone) {
+            text-align: center;
+            font-size: 6rem;
+        }
     }
 
     &__heading2 {
@@ -28,6 +49,10 @@
         z-index: 0;
         color: $quaternary-color;
         font-family: "Inter";
+
+        @include respond(phone) {
+            text-align: center;
+        }
     }
 
     &__main {
@@ -57,8 +82,15 @@
                 margin-left: 0;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(3, 1fr);
-                grid-gap: 1rem 0.5rem;
+                grid-gap: 0.5rem 0.25rem;
                 width: 80%;
+            }
+
+            @include respond(phone) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: 1rem 0.5rem;
+                width: 90%;
             }
 
             &-text {
@@ -75,6 +107,11 @@
                 @include respond(tab-port) {
                     font-size: 12rem;
                     margin-top: -6rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 8rem;
+                    margin-top: -4rem;
                 }
             }
 
@@ -112,6 +149,13 @@
                 width: 80%;
             }
 
+            @include respond(phone) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: 0.5rem 0.25rem;
+                width: 90%;
+            }
+
             &-text {
                 position: absolute;
                 font-family: "Inter";
@@ -126,6 +170,11 @@
                 @include respond(tab-port) {
                     font-size: 12rem;
                     margin-top: -6rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 8rem;
+                    margin-top: -4rem;
                 }
             }
 
@@ -176,6 +225,11 @@
                     font-size: 12rem;
                     margin-top: -6rem;
                 }
+
+                @include respond(phone) {
+                    font-size: 8rem;
+                    margin-top: -4rem;
+                }
             }
 
             &:hover {
@@ -207,6 +261,13 @@
                 margin-left: 0;
             }
 
+            @include respond(phone) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: 0.5rem 0.25rem;
+                width: 90%;
+            }
+
             &-text {
                 position: absolute;
                 font-family: "Inter";
@@ -220,6 +281,11 @@
 
                 @include respond(tab-port) {
                     font-size: 13rem;
+                }
+
+                @include respond(phone) {
+                    font-size: 8rem;
+                    margin-top: -4rem;
                 }
             }
 

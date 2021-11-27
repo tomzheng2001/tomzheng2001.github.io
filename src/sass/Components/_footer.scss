@@ -1,7 +1,7 @@
 .footer {
     height: 40vh;
     width: 100%;
-    position: absolute;
+    position: relative;
     background-color: $secondary-color;
     display: flex;
     flex-direction: column;
@@ -16,11 +16,18 @@
         font-size: 2rem;
         font-weight: 700;
 
+        @include respond(phone) {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+
         a {
             text-decoration: none;
             color: $tertiary-color;
             position: relative;
             overflow: hidden;
+            text-align: center;
 
             &::before {
                 content: "";
@@ -59,6 +66,19 @@
     &__logo {
         margin-top: 2rem;
         margin-left: 2rem;
+        cursor: pointer;
+        position: relative;
+
+        h3 {
+            position: absolute;
+            text-align: center;
+            font-family: "Inter";
+            font-weight: 500;
+            color: $tertiary-color;
+            transform: translateY(-4rem);
+            opacity: 0;
+            transition: all 0.2s ease-out;
+        }
 
         img {
             width: 2.93 * 2rem;
@@ -67,6 +87,14 @@
             filter: brightness(0) saturate(100%) invert(5%) sepia(75%)
                 saturate(6574%) hue-rotate(333deg) brightness(103%)
                 contrast(102%);
+        }
+
+        &:hover > img {
+            transform: scale(1.2);
+        }
+
+        &:hover > h3 {
+            opacity: 1;
         }
     }
 
