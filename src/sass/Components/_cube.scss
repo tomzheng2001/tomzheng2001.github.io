@@ -1,4 +1,4 @@
-$cube-size: 15em;
+$cube-size: 14em;
 
 .cube {
     width: $cube-size;
@@ -6,6 +6,11 @@ $cube-size: 15em;
     transform-style: preserve-3d;
     transform: rotateX(-25deg) rotateY(-25deg) rotateX(-25deg);
     transition: 0.3s ease all;
+
+    @include respond(tab-port) {
+        width: $cube-size - 2em;
+        height: $cube-size - 2em;
+    }
 
     //-----Panel
     .panel {
@@ -21,7 +26,7 @@ $cube-size: 15em;
         background: #000;
         border-radius: 5px;
         div {
-            border-radius: 1rem;
+            border-radius: 0.9rem;
         }
 
         //-----Sides
@@ -30,11 +35,18 @@ $cube-size: 15em;
             div {
                 background-color: white;
             }
+
+            @include respond(tab-port) {
+                transform: rotateX(90deg) translateZ(($cube-size - 2em) / 2);
+            }
         }
         &-bottom {
             transform: rotateX(90deg) translateZ(-$cube-size / 2);
             div {
                 background-color: #fff300;
+            }
+            @include respond(tab-port) {
+                transform: rotateX(90deg) translateZ(-($cube-size - 2em) / 2);
             }
         }
         &-left {
@@ -42,11 +54,17 @@ $cube-size: 15em;
             div {
                 background-color: #ff5f1f;
             }
+            @include respond(tab-port) {
+                transform: rotateY(90deg) translateZ(-($cube-size - 2em) / 2);
+            }
         }
         &-right {
             transform: rotateY(90deg) translateZ($cube-size / 2);
             div {
                 background-color: $main-color;
+            }
+            @include respond(tab-port) {
+                transform: rotateY(90deg) translateZ(($cube-size - 2em) / 2);
             }
         }
         &-back {
@@ -54,11 +72,17 @@ $cube-size: 15em;
             div {
                 background-color: #0096ff;
             }
+            @include respond(tab-port) {
+                transform: rotateZ(90deg) translateZ(-($cube-size - 2em) / 2);
+            }
         }
         &-front {
             transform: rotateZ(90deg) translateZ($cube-size / 2);
             div {
                 background-color: #83f52c;
+            }
+            @include respond(tab-port) {
+                transform: rotateZ(90deg) translateZ(($cube-size - 2em) / 2);
             }
         }
     }
@@ -106,4 +130,17 @@ $cube-size: 15em;
 .rubikscube {
     position: absolute;
     grid-column: 5 / -1;
+    grid-row: 2 / 3;
+    z-index: 0;
+    margin-bottom: -5rem;
+
+    @include respond(tab-port) {
+        margin-bottom: -20rem;
+    }
+
+    @include respond(phone) {
+        align-self: center;
+        top: 0;
+        margin-top: 15%;
+    }
 }

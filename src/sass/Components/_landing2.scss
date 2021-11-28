@@ -11,11 +11,22 @@
     align-items: center;
     overflow: hidden;
 
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__main {
         grid-column: 2 / -1;
         grid-row: 2 / 3;
         display: flex;
         flex-direction: column;
+
+        @include respond(phone) {
+            grid-column: 2 / 6;
+        }
     }
 
     &__header {
@@ -26,12 +37,33 @@
         align-items: center;
         font-size: 2.5rem;
         user-select: none;
+        z-index: 1;
+
+        @include respond(tab-port) {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            grid-column: 2 / 6;
+            font-size: 1.5rem;
+            align-self: center;
+        }
 
         &-name {
             color: $secondary-color;
             font-family: "Yellowtail";
             font-weight: 600;
             font-size: 12rem;
+
+            @include respond(tab-port) {
+                font-weight: 600;
+                font-size: 9rem;
+            }
+
+            @include respond(phone) {
+                font-size: 6rem;
+            }
         }
     }
 
@@ -44,6 +76,16 @@
         align-items: center;
         gap: 1rem;
         user-select: none;
+
+        @include respond(tab-port) {
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+
+        @include respond(phone) {
+            align-self: center;
+            font-size: 1.2rem;
+        }
 
         span {
             color: $secondary-color;
@@ -67,6 +109,9 @@
         gap: 12rem;
         margin-left: -5.5rem;
         z-index: 1;
+        @include respond(phone) {
+            display: none;
+        }
 
         span {
             width: 3px;
@@ -106,11 +151,25 @@
             text-decoration: none;
         }
 
+        @include respond(phone) {
+            flex-direction: row;
+            grid-column: 2 / -1;
+            justify-self: flex-start;
+            grid-row: 1 / 2;
+            margin-left: -2rem;
+            position: relative;
+            align-self: center;
+        }
+
         span {
             width: 3px;
             height: 100vh;
             background-color: $secondary-color;
             align-self: center;
+
+            @include respond(phone) {
+                display: none;
+            }
         }
 
         &-btn {
@@ -156,6 +215,16 @@
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
         text-decoration: none;
         width: 25%;
+
+        @include respond(tab-port) {
+            width: 37%;
+        }
+
+        @include respond(phone) {
+            width: 60%;
+            align-self: center;
+            font-size: 1.2rem;
+        }
 
         span {
             position: absolute;

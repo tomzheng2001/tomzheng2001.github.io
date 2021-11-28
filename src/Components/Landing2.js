@@ -24,7 +24,7 @@ const Landing2 = () => {
                     Hi there! I'm <span className="landing2__header-name">Tom Zheng</span>
                 </h1>
                 <h4 className="landing2__description">
-                    Full Stack Developer  <span>&</span>  UC Berkeley Undergrad 
+                    UC Berkeley Undergrad  <span>&</span>  Full Stack Developer
                 </h4>
                 <a href='resume.pdf' download className="landing2__button">
                             Download Resume
