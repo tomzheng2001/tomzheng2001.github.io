@@ -1,6 +1,6 @@
 # A Portolio Website
 
-In progress. Built using ReactJS.
+Built using ReactJS.
 
 LIVE: https://tomzheng2001.github.io/
 
