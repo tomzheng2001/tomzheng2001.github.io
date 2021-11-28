@@ -1,4 +1,4 @@
-$cube-size: 14em;
+$cube-size: 13em;
 
 .cube {
     width: $cube-size;
@@ -10,6 +10,12 @@ $cube-size: 14em;
     @include respond(tab-port) {
         width: $cube-size - 2em;
         height: $cube-size - 2em;
+    }
+
+    &:hover {
+        transform-style: preserve-3d;
+        animation: rotateX 1s linear infinite;
+        transform: scale(2);
     }
 
     //-----Panel
@@ -133,9 +139,11 @@ $cube-size: 14em;
     grid-row: 2 / 3;
     z-index: 0;
     margin-bottom: -5rem;
+    margin-left: 5rem;
 
     @include respond(tab-port) {
         margin-bottom: -20rem;
+        margin-left: 0rem;
     }
 
     @include respond(phone) {

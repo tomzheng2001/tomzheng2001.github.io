@@ -12,12 +12,13 @@ const Contact = () => {
                 "service_h4ke8rs",
                 "template_6junicr",
                 e.target,
-                "user_NQOvtHuF2UwMzW5JzaScb"
+                process.env.REACT_APP_USER_ID
             )
             .then(
                 (result) => {
                     console.log(result.text);
                     setSuccess(true);
+                    setTimeout(() => setSuccess(false), 3000);
                 },
                 (error) => {
                     console.log(error.text);

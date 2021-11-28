@@ -9,6 +9,10 @@
     font-family: "Inter";
     z-index: 0;
 
+    @include respond(tab-port) {
+        gap: 5rem;
+    }
+
     &__heading1 {
         position: relative;
         align-self: flex-start;

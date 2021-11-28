@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Cube from "./Cube";
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Landing2 = () => {
 
@@ -21,7 +23,17 @@ const Landing2 = () => {
         <div className="landing2">
            <div className="landing2__main">
                 <h1 className="landing2__header">
-                    Hi there! I'm <span className="landing2__header-name">Tom Zheng</span>
+                    Hi there! I'm <div className="landing2__header-name">
+                        <span style={{'--i':'1'}}>T</span>
+                        <span style={{'--i':'2'}}>o</span>
+                        <span style={{'--i':'3'}}>m</span>
+                        <span style={{'--i':'4', marginLeft:'2.5rem'}}>{" "}</span>
+                        <span style={{'--i':'5'}}>Z</span>
+                        <span style={{'--i':'6'}}>h</span>
+                        <span style={{'--i':'7'}}>e</span>
+                        <span style={{'--i':'8'}}>n</span>
+                        <span style={{'--i':'9'}}>g</span>
+                    </div>
                 </h1>
                 <h4 className="landing2__description">
                     UC Berkeley Undergrad  <span>&</span>  Full Stack Developer

@@ -22,6 +22,7 @@ const Projects = () => {
                 <Card header="Gitlet" imgsrc="project4.png" description={description4} codelink="https://github.com/tomzheng2001/gitlet" sitelink="https://github.com/tomzheng2001/gitlet" />
                 <Card header="RookieDB" imgsrc="project5.png" description={description5} codelink="https://github.com/tomzheng2001/RookieDB" sitelink="https://github.com/tomzheng2001/RookieDB" />
             </div>
+            <div></div>
         </div>
     );
 };
