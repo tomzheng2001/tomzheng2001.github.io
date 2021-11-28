@@ -30,6 +30,7 @@
         grid-row: 1 / 2;
         margin-top: 5%;
         font-size: 8rem;
+        user-select: none;
 
         @include respond(tab-port) {
             margin-top: -20%;
@@ -44,12 +45,14 @@
 
     &__heading2 {
         position: absolute;
+        user-select: none;
         align-self: center;
         grid-row: 1 / 2;
         grid-column: 1 / 8;
         font-size: 30rem;
-        opacity: 0.2;
-        z-index: -1;
+        color: $tertiary-color;
+        opacity: 0.15;
+        z-index: 2;
         margin-top: -5%;
         @include respond(tab-port) {
             top: 0;

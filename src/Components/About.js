@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const About = () => {
 
@@ -28,12 +29,15 @@ const About = () => {
                         Read More <i class="fas fa-long-arrow-alt-right"></i>
                     </button>
                 </div>
-                <div id="#a" class="ih-item circle effect1"><a href="#">
+                <div id="#a" class="ih-item circle effect1"><Link activeClass="active"
+                        to="section3"
+                        spy={true}
+                        smooth={true} href="#">
                     <div class="spinner"></div>
                     <div class="img"><img className="about__photo" src="personalphoto.jpg" alt="photo" /> </div>
                     <div class="info">
                         <h3>Contact Me</h3>
-                </div></a></div>
+                </div></Link></div>
                 
             </div>
             

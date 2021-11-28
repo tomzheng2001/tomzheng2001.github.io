@@ -30,20 +30,33 @@ const Header = () => {
                         to="section1"
                         spy={true}
                         smooth={true} 
+                        offset={visualViewport.height*-0.1}
                         className="header__about">About
+                        <span className="span1"></span>
+                        <span className="span2"></span>
+                    </Link>
+                    <Link activeClass="active"
+                        to="section4"
+                        spy={true}
+                        smooth={true} 
+                        offset={visualViewport.height*-0.1}
+                        className="header__about">Skills
                         <span className="span1"></span>
                         <span className="span2"></span>
                     </Link>
                     <Link activeClass="active"
                         to="section2"
                         spy={true}
+                        offset={visualViewport.height*-0.1}
                         smooth={true} className="header__projects">Projects
+                        
                         <span className="span1"></span>
                         <span className="span2"></span>
                     </Link>
                     <Link activeClass="active"
                         to="section3"
                         spy={true}
+                        offset={visualViewport.height*-0.1}
                         smooth={true}  className="header__contact">Contact
                         <span className="span1"></span>
                         <span className="span2"></span>

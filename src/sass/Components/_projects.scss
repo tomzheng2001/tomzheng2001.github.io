@@ -1,6 +1,6 @@
 .projects {
     position: relative;
-    height: 150vh;
+    height: fit-content;
     width: 100%;
     background-color: $quaternary-color;
     display: flex;
@@ -19,6 +19,7 @@
         font-family: "Inter";
         font-size: 8rem;
         z-index: 1;
+        user-select: none;
     }
 
     &__heading2 {
@@ -30,6 +31,11 @@
         margin-top: -12vh;
         color: $tertiary-color;
         font-family: "Inter";
+        user-select: none;
+
+        @media only screen and (max-height: 640px) {
+            margin-top: -15vh;
+        }
     }
 
     &__main {

@@ -7,7 +7,8 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Loader from "./Loader";
-import { Link, animateScroll as scroll } from "react-scroll";
+import Landing1 from "./Landing1";
+import Landing2 from "./Landing2";
 
 
 const Landing = () => {
@@ -15,60 +16,14 @@ const Landing = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 4000);
+        setTimeout(() => setLoading(false), 2000);
     }, [])
 
     return (
         loading ?  <Loader loading={loading} /> :
         <Fragment>
-            <div className="landing" id="particles">
-                <Header />
-                <script type="text/javascript" src="../Assets/tsparticles.min.js"></script>
-                <div className="landing__main">
-                    <h1 className="landing__header">
-                        Hi there! I'm <span className="landing__header-name">Tom Zheng</span>.
-                    </h1>
-                    <h4 className="landing__description">
-                        Full stack developer & UC Berkeley undergrad 
-                    </h4>
-                    <a href='resume.pdf' download className="landing__button">
-                        Download Resume
-                        <span></span><span></span><span></span><span></span>
-                    </a>
-                    <div className="landing__mediaicons">
-                        <a id="link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tomzheng1/">
-                            <button className="landing__mediaicons-btn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </button>
-                        </a>
-                        <a id="link" target="_blank" rel="noreferrer" href="https://github.com/tomzheng2001">
-                            <button className="landing__mediaicons-btn">
-                                <i class="fab fa-github-square"></i>
-                            </button>
-                        </a>
-                        <a id="link" target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=100036140251490">
-                            <button className="landing__mediaicons-btn">
-                                <i class="fab fa-facebook-square"></i>
-                            </button>
-                        </a>
-                        <a id="link" target="_blank" rel="noreferrer" href="mailto: tomzheng@berkeley.edu">
-                            <button className="landing__mediaicons-btn">
-                                <i class="far fa-envelope"></i>
-                            </button>    
-                        </a>
-                    </div>
-                </div>
-                <Link activeClass="active"
-                    to="section1"
-                    spy={true}
-                    smooth={true} id="link" href="#scrolldown" >
-                    <button className="landing__arrow">
-                        <i class="fas fa-long-arrow-alt-down"></i>
-                        <span></span><span></span><span></span><span></span>
-                    </button>     
-                </Link>
-                <Background className="landing__bg" />
-            </div>
+            <Header />
+            <Landing2 />
             <About />
             <Skills />
             <Projects />

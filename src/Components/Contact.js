@@ -44,7 +44,7 @@ const Contact = () => {
                     <h2>Message sent successfully!</h2>
                 </span>
                 <form className="contact__form" onSubmit={sendEmail}>
-                    <h2 className="contact__heading">Send me an message!</h2>
+                    <h2 className="contact__heading">Send me a message!</h2>
                     <div className="contact__name">
                         <input
                             type="text"
@@ -52,7 +52,7 @@ const Contact = () => {
                             placeholder="Name"
                             id="name"
                             required
-                            autoComplete="off"
+                            autocomplete="new-password"
                             name="name"
                         />
                     </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                             placeholder="Email address"
                             id="email"
                             required
-                            autoComplete="off"
+                            autocomplete="new-password"
                             email="email"
                         />
                     </div>
