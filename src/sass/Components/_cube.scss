@@ -7,6 +7,11 @@ $cube-size: 13em;
     transform: rotateX(-25deg) rotateY(-25deg) rotateX(-25deg);
     transition: 0.3s ease all;
 
+    @include respond(big-desktop) {
+        width: $cube-size + 3em;
+        height: $cube-size + 3em;
+    }
+
     @include respond(tab-port) {
         width: $cube-size - 2em;
         height: $cube-size - 2em;
@@ -44,6 +49,10 @@ $cube-size: 13em;
             @include respond(tab-port) {
                 transform: rotateX(90deg) translateZ(($cube-size - 2em) / 2);
             }
+
+            @include respond(big-desktop) {
+                transform: rotateX(90deg) translateZ(($cube-size + 3em) / 2);
+            }
         }
         &-bottom {
             transform: rotateX(90deg) translateZ(-$cube-size / 2);
@@ -52,6 +61,10 @@ $cube-size: 13em;
             }
             @include respond(tab-port) {
                 transform: rotateX(90deg) translateZ(-($cube-size - 2em) / 2);
+            }
+
+            @include respond(big-desktop) {
+                transform: rotateX(90deg) translateZ(-($cube-size + 3em) / 2);
             }
         }
         &-left {
@@ -62,6 +75,10 @@ $cube-size: 13em;
             @include respond(tab-port) {
                 transform: rotateY(90deg) translateZ(-($cube-size - 2em) / 2);
             }
+
+            @include respond(big-desktop) {
+                transform: rotateY(90deg) translateZ(-($cube-size + 3em) / 2);
+            }
         }
         &-right {
             transform: rotateY(90deg) translateZ($cube-size / 2);
@@ -70,6 +87,10 @@ $cube-size: 13em;
             }
             @include respond(tab-port) {
                 transform: rotateY(90deg) translateZ(($cube-size - 2em) / 2);
+            }
+
+            @include respond(big-desktop) {
+                transform: rotateY(90deg) translateZ(($cube-size + 3em) / 2);
             }
         }
         &-back {
@@ -80,6 +101,10 @@ $cube-size: 13em;
             @include respond(tab-port) {
                 transform: rotateZ(90deg) translateZ(-($cube-size - 2em) / 2);
             }
+
+            @include respond(big-desktop) {
+                transform: rotateZ(90deg) translateZ(-($cube-size + 3em) / 2);
+            }
         }
         &-front {
             transform: rotateZ(90deg) translateZ($cube-size / 2);
@@ -88,6 +113,10 @@ $cube-size: 13em;
             }
             @include respond(tab-port) {
                 transform: rotateZ(90deg) translateZ(($cube-size - 2em) / 2);
+            }
+
+            @include respond(big-desktop) {
+                transform: rotateZ(90deg) translateZ(($cube-size + 3em) / 2);
             }
         }
     }

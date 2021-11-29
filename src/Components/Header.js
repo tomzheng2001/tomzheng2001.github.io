@@ -17,6 +17,7 @@ const Header = (props) => {
     const didToggle = () => {
         setIsToggle(!isToggle);
         const root = document.documentElement;
+        document.getElementById("pulsearrow").style.display = "none";
 
         if (isToggle) {
             root.style.setProperty("--main-color", "#64DFDF");
@@ -75,7 +76,7 @@ const Header = (props) => {
                         for="cb3"
                     ></label>
                 </div>
-                <i class="fas fa-long-arrow-alt-left"></i>
+                <i class="fas fa-long-arrow-alt-left" id="pulsearrow"></i>
             </div>
             <div id="navigation">
                 <div className="header__hamburger">
