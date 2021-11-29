@@ -11,6 +11,8 @@
     align-items: center;
     overflow: hidden;
 
+    transition: all 0.7s ease-in-out;
+
     @include respond(phone) {
         display: flex;
         flex-direction: column;

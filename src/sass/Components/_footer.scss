@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    transition: all 0.7s ease-in-out;
 
     &__links {
         display: flex;

@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
     color: $main-color;
+    transition: all 0.7s ease-in-out;
 
     @include respond(tab-port) {
         height: 140vh;
