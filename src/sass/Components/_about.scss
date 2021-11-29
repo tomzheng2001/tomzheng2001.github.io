@@ -1,5 +1,5 @@
 .about {
-    height: 100vh;
+    height: fit-content;
     width: 100%;
     font-family: "Inter";
     background-color: $secondary-color;
@@ -25,12 +25,37 @@
     }
 
     &__heading1 {
-        align-self: center;
         grid-column: 2 / 10;
         grid-row: 1 / 2;
         margin-top: 5%;
         font-size: 8rem;
         user-select: none;
+        font-family: "Yellowtail";
+        position: relative;
+        z-index: 100;
+
+        &:hover > span {
+            animation: animate 1s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--j));
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+            20% {
+                transform: translateY(-20px);
+            }
+            40%,
+            100% {
+                transform: translateY(0px);
+            }
+        }
 
         @include respond(tab-port) {
             margin-top: -20%;
@@ -72,6 +97,7 @@
         grid-column: 1 / -1;
         padding: 6rem;
         justify-content: space-around;
+        margin-top: 7rem;
 
         @include respond(tab-port) {
             flex-direction: column;
@@ -83,17 +109,25 @@
         &-text {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 3rem;
             font-size: 2rem;
             font-weight: 500;
             width: 50%;
             grid-column: 1 / 6;
+            font-family: "Inter";
+
+            @media only screen and (max-width: 1220px) {
+                font-size: 1.75rem;
+                gap: 2rem;
+            }
 
             @include respond(tab-port) {
                 transform: scaleY(-1);
                 align-items: center;
                 text-align: center;
                 width: 90%;
+                gap: 2rem;
+                font-size: 2rem;
             }
 
             button {

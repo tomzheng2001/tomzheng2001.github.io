@@ -5,7 +5,16 @@ const About = () => {
 
     return (
         <div id="section1" className="about">
-            <h1 className="about__heading1">About Me</h1>
+            <h1 className="about__heading1">
+                        <span style={{'--j':'1'}}>A</span>
+                        <span style={{'--j':'2'}}>b</span>
+                        <span style={{'--j':'3'}}>o</span>
+                        <span style={{'--j':'4'}}>u</span>
+                        <span style={{'--j':'5'}}>t</span>
+                        <span style={{'--j':'6', marginLeft:'2.5rem'}}>{" "}</span>
+                        <span style={{'--j':'7'}}>M</span>
+                        <span style={{'--j':'8'}}>e</span>
+            </h1>
             <h1 className="about__heading2">01</h1>
             <div className="about__intro">
                 <div id="#b" className="about__intro-text">
@@ -25,9 +34,11 @@ const About = () => {
                         school and programming, I enjoy working out, discovering new
                         movies, and blindfolded speedcubing.
                     </p>
-                    <button className="about__more">
-                        Read More <i class="fas fa-long-arrow-alt-right"></i>
-                    </button>
+                    <p className="about__intro-text3">
+                        I am currently looking for internship opportunities for Spring 2022, Summer
+                        2022, and Winter 2022, ideally in California or remote, although I would open
+                        to relocation. Hover over or tap my picture to drop me a message!
+                    </p>
                 </div>
                 <div id="#a" class="ih-item circle effect1"><Link activeClass="active"
                         to="section3"

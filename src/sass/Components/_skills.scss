@@ -105,7 +105,7 @@
                 font-family: "Inter";
                 font-size: 15rem;
                 color: $quaternary-color;
-                opacity: 0.5;
+                opacity: 0.6;
                 top: 0;
                 left: 0;
                 margin-top: -7rem;
@@ -168,7 +168,7 @@
                 font-family: "Inter";
                 font-size: 15rem;
                 color: $quaternary-color;
-                opacity: 0.5;
+                opacity: 0.6;
                 top: 0;
                 right: 0;
                 margin-top: -7rem;
@@ -222,7 +222,7 @@
                 font-family: "Inter";
                 font-size: 15rem;
                 color: $quaternary-color;
-                opacity: 0.5;
+                opacity: 0.6;
                 top: 0;
                 right: 0;
                 margin-top: -7rem;
@@ -280,7 +280,7 @@
                 font-family: "Inter";
                 font-size: 15rem;
                 color: $quaternary-color;
-                opacity: 0.4;
+                opacity: 0.6;
                 top: 0;
                 left: 0;
                 margin-top: -7rem;
@@ -319,22 +319,25 @@
     svg {
         width: 6rem;
         height: 6rem;
-        color: $main-color;
         transition: all 0.4s ease;
-        filter: brightness(0) saturate(100%) invert(9%) sepia(64%)
-            saturate(5206%) hue-rotate(328deg) brightness(80%) contrast(108%);
+        // filter: brightness(0) saturate(100%) invert(9%) sepia(64%)
+        //     saturate(5206%) hue-rotate(328deg) brightness(80%) contrast(108%);
+        filter: brightness(0);
     }
 
     i {
         font-size: 6rem;
         transition: all 0.4s ease;
         color: $main-color;
+        filter: brightness(0);
     }
 
     h4 {
         font-size: 2.5rem;
         transition: all 0.15s ease;
         text-align: center;
+        color: $main-color;
+        filter: brightness(0);
     }
 
     &:hover > svg {
@@ -434,7 +437,7 @@
     font-size: 1.75rem;
     font-weight: bold;
     font-family: "Inter";
-    color: $main-color;
+    color: $secondary-color;
     text-align: center;
     line-height: 1.75rem;
     transform: rotate(315deg);
@@ -442,7 +445,7 @@
     width: 15rem;
     display: block;
     background: #79a70a;
-    background: linear-gradient(#ffc922 0%, #ffc922 100%);
+    background: black;
     box-shadow: 5px 5px 3px -5px rgba(0, 0, 0, 1);
     position: absolute;
     top: 3rem;

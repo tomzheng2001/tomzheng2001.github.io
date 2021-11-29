@@ -66,7 +66,8 @@
             font-family: "Inter";
             outline: none;
             border: none;
-            background: rgba($tertiary-color, 0.8);
+            background: $tertiary-color;
+            opacity: 0.8;
             border-bottom: 4px solid transparent;
             color: $secondary-color;
 
@@ -86,7 +87,8 @@
             font-family: "Inter";
             outline: none;
             border: none;
-            background: rgba($tertiary-color, 0.8);
+            background: $tertiary-color;
+            opacity: 0.8;
             border-bottom: 4px solid transparent;
             color: $secondary-color;
 
@@ -106,7 +108,8 @@
             font-family: "Inter";
             outline: none;
             border: 4px solid transparent;
-            background: rgba($tertiary-color, 0.8);
+            background: $tertiary-color;
+            opacity: 0.8;
             color: $secondary-color;
             resize: none;
 
@@ -191,7 +194,8 @@
         left: 0;
         width: 55%;
         height: 100%;
-        background: rgba($main-color, 0.8);
+        background: $main-color;
+        opacity: 0.8;
         clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
         z-index: 0;
     }
@@ -202,7 +206,8 @@
         right: 0;
         width: 58.8%;
         height: 100%;
-        background: rgba($main-color, 0.8);
+        background: $main-color;
+        opacity: 0.8;
         clip-path: polygon(23.4% 0, 100% 0, 100% 100%, 0 100%);
         z-index: 0;
         display: flex;

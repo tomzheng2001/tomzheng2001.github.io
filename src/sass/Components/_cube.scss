@@ -15,7 +15,6 @@ $cube-size: 13em;
     &:hover {
         transform-style: preserve-3d;
         animation: rotateX 1s linear infinite;
-        transform: scale(2);
     }
 
     //-----Panel

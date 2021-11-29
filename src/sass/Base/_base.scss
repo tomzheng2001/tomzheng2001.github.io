@@ -29,8 +29,18 @@ body {
     position: relative;
 }
 
-$main-color: #720026;
-$secondary-color: #ff7f51;
-$tertiary-color: #4f000b;
-$quaternary-color: #ce4257;
-$quinary-color: #ff9b54;
+:root {
+    --main-color: #720026;
+    --secondary-color: #ff7f51;
+    --tertiary-color: #4f000b;
+    --quaternary-color: #ce4257;
+    --quinary-color: #ff9b54;
+    --base-color: #fff;
+}
+
+$main-color: var(--main-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);
+$quaternary-color: var(--quaternary-color);
+$quinary-color: var(--quinary-color);
+$base-color: var(--base-color);
