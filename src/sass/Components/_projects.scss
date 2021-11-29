@@ -24,6 +24,10 @@
         font-size: 8rem;
         z-index: 1;
         user-select: none;
+
+        @media only screen and (min-height: 1000px) and (min-width: 1200px) {
+            margin-top: 6vh;
+        }
     }
 
     &__heading2 {
@@ -36,6 +40,10 @@
         color: $tertiary-color;
         font-family: "Inter";
         user-select: none;
+
+        @media only screen and (min-height: 1000px) and (min-width: 1200px) {
+            margin-top: -9vh;
+        }
 
         @media only screen and (max-height: 640px) {
             margin-top: -15vh;

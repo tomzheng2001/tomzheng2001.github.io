@@ -34,6 +34,34 @@
         font-size: 8rem;
         z-index: 1;
         user-select: none;
+        position: relative;
+
+        &:hover > span {
+            animation: animate 1s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--k));
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+            20% {
+                transform: translateY(-20px);
+            }
+            40%,
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media only screen and (min-height: 1000px) and (min-width: 1200px) {
+            margin-top: 6vh;
+        }
 
         @include respond(phone) {
             text-align: center;
@@ -52,6 +80,10 @@
         color: $quaternary-color;
         font-family: "Inter";
         user-select: none;
+
+        @media only screen and (min-height: 1000px) and (min-width: 1200px) {
+            margin-top: -9vh;
+        }
 
         @media only screen and (max-height: 640px) {
             margin-top: -15vh;
@@ -322,14 +354,14 @@
         transition: all 0.4s ease;
         // filter: brightness(0) saturate(100%) invert(9%) sepia(64%)
         //     saturate(5206%) hue-rotate(328deg) brightness(80%) contrast(108%);
-        filter: brightness(0);
+        // filter: brightness(0);
     }
 
     i {
         font-size: 6rem;
         transition: all 0.4s ease;
         color: $main-color;
-        filter: brightness(0);
+        // filter: brightness(0);
     }
 
     h4 {
@@ -337,7 +369,7 @@
         transition: all 0.15s ease;
         text-align: center;
         color: $main-color;
-        filter: brightness(0);
+        // filter: brightness(0);
     }
 
     &:hover > svg {
