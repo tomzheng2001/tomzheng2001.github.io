@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from "react";
 import emailjs from "emailjs-com";
-import { Opacity } from "tsparticles/Options/Classes/Particles/Opacity/Opacity";
 
 const Contact = () => {
     const [success, setSuccess] = useState(false);
@@ -18,7 +17,7 @@ const Contact = () => {
                 (result) => {
                     console.log(result.text);
                     setSuccess(true);
-                    setTimeout(() => setSuccess(false), 3000);
+                    setTimeout(() => setSuccess(false), 1000);
                 },
                 (error) => {
                     console.log(error.text);

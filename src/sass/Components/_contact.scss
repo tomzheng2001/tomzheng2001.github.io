@@ -231,6 +231,7 @@
 
         h2 {
             width: 50%;
+            color: $secondary-color;
         }
 
         @include respond(tab-port) {
