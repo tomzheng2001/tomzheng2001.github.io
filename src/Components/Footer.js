@@ -8,9 +8,25 @@ const Footer = () => {
                 <img src="logo1.png" alt="logo1" id="footerlogo" />
             </a>
             <div className="footer__links">
-                <a href="https://github.com/tomzheng2001">Github</a>
-                <a href="https://www.linkedin.com/in/tomzheng1/">Linkedin</a>
-                <a href="https://www.facebook.com/profile.php?id=100036140251490">
+                <a
+                    href="https://github.com/tomzheng2001"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Github
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/tomzheng1/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Linkedin
+                </a>
+                <a
+                    href="https://www.facebook.com/profile.php?id=100036140251490"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     Facebook
                 </a>
                 <a href="resume.pdf" download>
