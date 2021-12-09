@@ -22,7 +22,7 @@
     }
 
     @include respond(phone) {
-        height: 160vh;
+        height: fit-content;
     }
 
     &__heading1 {
@@ -64,6 +64,7 @@
 
         @include respond(phone) {
             top: 0;
+            margin-top: 15%;
             text-align: center;
             font-size: 6rem;
         }
@@ -86,7 +87,7 @@
         }
 
         @include respond(phone) {
-            opacity: 0;
+            margin-top: -30%;
         }
     }
 

@@ -8,10 +8,14 @@ const Footer = () => {
                 <img src="logo1.png" alt="logo1" id="footerlogo" />
             </a>
             <div className="footer__links">
-                <a href="">Github</a>
-                <a href="">Linkedin</a>
-                <a href="">Facebook</a>
-                <a href="">Resume</a>
+                <a href="https://github.com/tomzheng2001">Github</a>
+                <a href="https://www.linkedin.com/in/tomzheng1/">Linkedin</a>
+                <a href="https://www.facebook.com/profile.php?id=100036140251490">
+                    Facebook
+                </a>
+                <a href="resume.pdf" download>
+                    Resume
+                </a>
             </div>
             <p>Built and Designed by Tom Zheng © 2021</p>
         </div>

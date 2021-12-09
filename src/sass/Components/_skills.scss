@@ -65,8 +65,9 @@
         }
 
         @include respond(phone) {
-            text-align: center;
-            font-size: 6rem;
+            align-self: center;
+            font-size: 5rem;
+            margin-right: 0;
         }
     }
 
@@ -91,7 +92,8 @@
         }
 
         @include respond(phone) {
-            text-align: center;
+            align-self: center;
+            margin-left: 0;
         }
     }
 
@@ -248,6 +250,10 @@
                 grid-template-rows: repeat(3, 1fr);
                 grid-gap: 1rem 0.5rem;
                 width: 80%;
+            }
+
+            @include respond(phone) {
+                width: 90%;
             }
 
             &-text {
