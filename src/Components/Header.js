@@ -60,7 +60,7 @@ const Header = (props) => {
         <nav className="header">
             <div id="logoandtoggle">
                 <a href="." className="header__logo">
-                    <img src="logo1.png" alt="logo" id="mainlogo" />
+                    <img src="logo1.png" alt="Tom Zheng" id="mainlogo" />
                 </a>
                 <div className="header__toggle">
                     <input
