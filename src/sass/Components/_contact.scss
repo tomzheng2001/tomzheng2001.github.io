@@ -57,7 +57,7 @@
         align-items: center;
         justify-content: center;
         z-index: 1;
-        gap: 1.5rem;
+        gap: 2rem;
         width: 45%;
     }
 
@@ -79,6 +79,7 @@
             opacity: 0.8;
             border-bottom: 4px solid transparent;
             color: $secondary-color;
+            width: 20em;
 
             &::placeholder {
                 color: $secondary-color;
@@ -86,6 +87,10 @@
 
             &:focus {
                 border-bottom: 4px solid $secondary-color;
+            }
+
+            @include respond(phone) {
+                width: 15em;
             }
         }
     }
@@ -100,6 +105,7 @@
             opacity: 0.8;
             border-bottom: 4px solid transparent;
             color: $secondary-color;
+            width: 20em;
 
             &::placeholder {
                 color: $secondary-color;
@@ -107,6 +113,10 @@
 
             &:focus {
                 border-bottom: 4px solid $secondary-color;
+            }
+
+            @include respond(phone) {
+                width: 15em;
             }
         }
     }
@@ -121,6 +131,7 @@
             opacity: 0.8;
             color: $secondary-color;
             resize: none;
+            width: 20em;
 
             &::placeholder {
                 color: $secondary-color;
@@ -128,6 +139,10 @@
 
             &:focus {
                 border: 4px solid $secondary-color;
+            }
+
+            @include respond(phone) {
+                width: 15em;
             }
         }
     }

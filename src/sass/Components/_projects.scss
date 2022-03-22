@@ -66,9 +66,17 @@
         grid-gap: 3rem 6rem;
         margin-top: -5rem;
 
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            padding: 20rem;
+            gap: 3rem;
+        }
+
         @include respond(tab-port) {
             display: flex;
             flex-direction: column;
+            padding: 8rem;
         }
 
         @include respond(phone) {
