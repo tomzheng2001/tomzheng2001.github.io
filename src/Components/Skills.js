@@ -38,7 +38,7 @@ const Skills = () => {
                     <span style={{ "--k": "15" }}>e</span>
                     <span style={{ "--k": "16" }}>s</span>
                 </h1>
-                <h1 className="skills__heading2">02</h1>
+                <h1 className="skills__heading2">03</h1>
             </Fragment>
             <div className="skills__main">
                 <div className="skills__main-frontend">
@@ -552,7 +552,7 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci 61A
+                                COMPSCI 61A
                             </h3>
                             <p className="classlist__item-description">
                                 Structure and Interpretation of Computer
@@ -566,7 +566,7 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci 61B
+                                COMPSCI 61B
                             </h3>
                             <p className="classlist__item-description">
                                 Data Structures
@@ -579,7 +579,7 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci 61C
+                                COMPSCI 61C
                             </h3>
                             <p className="classlist__item-description">
                                 Great Ideas of Computer Architecture
@@ -592,7 +592,7 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci 70
+                                COMPSCI 70
                             </h3>
                             <p className="classlist__item-description">
                                 Discrete Math and Probability
@@ -605,7 +605,7 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci 170
+                                COMPSCI 170
                             </h3>
                             <p className="classlist__item-description">
                                 Efficient Algorithms and Intractable Problems
@@ -618,10 +618,23 @@ const Skills = () => {
                             className="classlist__item"
                         >
                             <h3 className="classlist__item-header">
-                                CompSci W186
+                                COMPSCI W186
                             </h3>
                             <p className="classlist__item-description">
                                 Introduction to Database Systems
+                            </p>
+                        </a>
+                        <a
+                            href="https://cs161.org/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="classlist__item"
+                        >
+                            <h3 className="classlist__item-header">
+                                COMPSCI 161
+                            </h3>
+                            <p className="classlist__item-description">
+                                Computer Security
                             </p>
                         </a>
                         <a
@@ -716,6 +729,19 @@ const Skills = () => {
                             <h3 className="classlist__item-header">ECON 115</h3>
                             <p className="classlist__item-description">
                                 The World Economy in the Twentieth Century
+                            </p>
+                        </a>
+                        <a
+                            href="https://classes.berkeley.edu/content/2020-Spring-ECON-C171-001-LEC-001"
+                            rel="noreferrer"
+                            target="_blank"
+                            className="classlist__item"
+                        >
+                            <h3 className="classlist__item-header">
+                                ECON C171
+                            </h3>
+                            <p className="classlist__item-description">
+                                Economic Development
                             </p>
                         </a>
                     </ul>

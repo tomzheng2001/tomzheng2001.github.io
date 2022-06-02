@@ -16,8 +16,17 @@ const Projects = () => {
     return (
         <div id="section2" className="projects">
             <Fragment>
-                <h1 className="projects__heading1">Projects</h1>
-                <h1 className="projects__heading2">03</h1>
+                <h1 className="projects__heading1">
+                    <span style={{ "--j": "1" }}>P</span>
+                    <span style={{ "--j": "2" }}>r</span>
+                    <span style={{ "--j": "3" }}>o</span>
+                    <span style={{ "--j": "4" }}>j</span>
+                    <span style={{ "--j": "5" }}>e</span>
+                    <span style={{ "--j": "7" }}>c</span>
+                    <span style={{ "--j": "8" }}>t</span>
+                    <span style={{ "--j": "9" }}>s</span>
+                </h1>
+                <h1 className="projects__heading2">04</h1>
             </Fragment>
             <div className="projects__main">
                 <Card

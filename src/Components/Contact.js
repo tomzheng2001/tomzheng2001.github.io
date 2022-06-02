@@ -29,8 +29,19 @@ const Contact = () => {
     return (
         <div id="section3" class="contact">
             <Fragment>
-                <h1 className="contact__heading1">Contact Me</h1>
-                <h1 className="contact__heading2">04</h1>
+                <h1 className="contact__heading1">
+                    <span style={{ "--j": "1" }}>C</span>
+                    <span style={{ "--j": "2" }}>o</span>
+                    <span style={{ "--j": "3" }}>n</span>
+                    <span style={{ "--j": "4" }}>t</span>
+                    <span style={{ "--j": "5" }}>a</span>
+                    <span style={{ "--j": "6" }}>c</span>
+                    <span style={{ "--j": "7" }}>t</span>
+                    <span style={{ "--j": "8", marginLeft: "2.5rem" }}> </span>
+                    <span style={{ "--j": "9" }}>M</span>
+                    <span style={{ "--j": "10" }}>e</span>
+                </h1>
+                <h1 className="contact__heading2">05</h1>
             </Fragment>
 
             <div id="wrapper" className="wrapper">

@@ -16,10 +16,33 @@
         opacity: 1.5;
         font-family: "Inter";
         font-size: 8rem;
-        z-index: 1;
+        z-index: 10;
         margin-top: 8vh;
         margin-right: 7vw;
         user-select: none;
+
+        &:hover > span {
+            animation: animate 1s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--j));
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px);
+            }
+            20% {
+                transform: translateY(-20px);
+            }
+            40%,
+            100% {
+                transform: translateY(0px);
+            }
+        }
 
         @media only screen and (min-height: 1000px) and (min-width: 1200px) {
             margin-top: 6vh;

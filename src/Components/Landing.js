@@ -9,12 +9,13 @@ import Footer from "./Footer";
 import Loader from "./Loader";
 import Landing1 from "./Landing1";
 import Landing2 from "./Landing2";
+import Work from "./Work";
 
 const Landing = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2000);
+        setTimeout(() => setLoading(false), 3000);
     }, []);
 
     const changeContactPhoto = (islight) => {
@@ -58,6 +59,7 @@ const Landing = () => {
             />
             <Landing2 />
             <About />
+            <Work />
             <Skills />
             <Projects />
             <Contact />
