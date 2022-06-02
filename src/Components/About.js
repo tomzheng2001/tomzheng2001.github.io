@@ -26,16 +26,17 @@ const About = () => {
                         an online game.
                     </p>
                     <p className="about__intro-text2">
-                        Currently, I am in my third year at the University of
-                        California, Berkeley pursuing a double major in Computer
-                        Science and Economics with an interest in software
-                        engineering, cryptography, and database systems. Outside
-                        of school and programming, I enjoy working out,
-                        discovering new movies, and blindfolded speedcubing.
+                        Currently, I am an incoming fourth year at the
+                        University of California, Berkeley pursuing a double
+                        major in Computer Science and Economics with an interest
+                        in software engineering, cryptography, and database
+                        systems. Outside of school and programming, I enjoy
+                        working out, discovering new movies, and blindfolded
+                        speedcubing.
                     </p>
                     <p className="about__intro-text3">
                         I am currently looking for internship opportunities for
-                        Spring 2022, Summer 2022, and Winter 2022, ideally in
+                        Winter 2023, Spring 2023, and Summer 2023, ideally in
                         California or remote, although I would open to
                         relocation. Hover over or tap my picture to drop me a
                         message!
