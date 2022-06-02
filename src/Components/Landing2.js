@@ -38,7 +38,7 @@ const Landing2 = () => {
                 <h4 className="landing2__description">
                     UC Berkeley Undergrad <span>&</span> Full Stack Developer
                 </h4>
-                <a href="resume.pdf" download className="landing2__button">
+                <a href="resumeJune.pdf" download className="landing2__button">
                     Download Resume
                     <span></span>
                     <span></span>

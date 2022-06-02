@@ -29,7 +29,7 @@ const Footer = () => {
                 >
                     Facebook
                 </a>
-                <a href="resume.pdf" download>
+                <a href="resumeJune.pdf" download>
                     Resume
                 </a>
             </div>
