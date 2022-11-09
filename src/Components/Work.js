@@ -26,6 +26,35 @@ const Work = () => {
                 <section id="timeline">
                     <div className="linepart">
                         <span
+                            data-date="Incoming 2023"
+                            className="linepart__line"
+                        ></span>
+                        <div class="tl-item">
+                            <div
+                                class="tl-bg"
+                                style={{
+                                    "background-image": "url(robloxoffice.jpg)",
+                                    "--b": "blue",
+                                }}
+                            ></div>
+                            <img
+                                class="tl-year"
+                                src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Roblox_logo_2017.svg"
+                                alt=""
+                            />
+                            {/* <div class="tl-year">
+                            <p>Coinbase</p>
+                        </div> */}
+
+                            <div class="tl-content">
+                                <h1>Incoming Software Engineer Intern</h1>
+                                <p>San Mateo, CA</p>
+                                <p>2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="linepart">
+                        <span
                             data-date="Aug 2022 - Dec 2022"
                             className="linepart__line"
                         ></span>
@@ -45,7 +74,10 @@ const Work = () => {
                             <div class="tl-content">
                                 <h1>Incoming Software Engineer Intern</h1>
                                 <p>San Francisco, CA</p>
-                                <p>Fall 2022</p>
+                                <p>
+                                    Institutional - Custody Applications, Fall
+                                    2022
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -115,78 +147,9 @@ const Work = () => {
                                 <h1 class="f3 text--accent ttu">
                                     Technical Director
                                 </h1>
-                                <p>Remote</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="linepart">
-                        <span
-                            data-date="Aug 2018 - Apr 2019"
-                            className="linepart__line"
-                        ></span>
-                        <div class="tl-item">
-                            <div
-                                class="tl-bg"
-                                style={{
-                                    "background-image":
-                                        "url(https://placeimg.com/800/800/nature)",
-                                }}
-                            ></div>
-                            <img
-                                style={{
-                                    filter: "invert(100%)",
-                                }}
-                                class="tl-year"
-                                src="kumon.svg"
-                                alt=""
-                            />
-                            {/* <div class="tl-year">
-                            <p class="f2 heading--sanSerif">Kumon</p>
-                        </div> */}
-
-                            <div class="tl-content">
-                                <h1 class="f3 text--accent ttu">Tutor</h1>
-                                <p>Fairfield, CA</p>
                                 <p>
-                                    Tutored middle and high school students in
-                                    reading & mathematics
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="linepart">
-                        <span
-                            data-date="Nov 2017 - Feb 2018"
-                            className="linepart__line"
-                        ></span>
-                        <div class="tl-item">
-                            <div
-                                class="tl-bg"
-                                style={{
-                                    "background-image":
-                                        "url(https://placeimg.com/801/801/nature)",
-                                }}
-                            ></div>
-                            <img
-                                style={{
-                                    "--j": "-2rem",
-                                }}
-                                class="tl-year"
-                                src="yup.svg"
-                                alt=""
-                            />
-                            {/* <div class="tl-year">
-                            <p class="f2 heading--sanSerif">Yup</p>
-                        </div> */}
-
-                            <div class="tl-content">
-                                <h1 class="f3 text--accent ttu">Tutor</h1>
-                                <p>Remote</p>
-                                <p>
-                                    Tutored high school & college students in AP
-                                    Calculus AB & BC
+                                    Assist with design & development of website
+                                    and app
                                 </p>
                             </div>
                         </div>

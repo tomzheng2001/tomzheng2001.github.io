@@ -300,7 +300,7 @@
             position: relative;
             box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
             background-color: $secondary-color;
-            margin-left: -10vw;
+            margin-right: -10vw;
             border-radius: 1rem;
 
             @include respond(tab-port) {
@@ -412,7 +412,7 @@
         &::before {
             content: "Syllabus";
             font-family: "Inter";
-            font-weight: 500;
+            font-weight: 800;
             font-size: 2rem;
             color: $main-color;
             display: flex;
